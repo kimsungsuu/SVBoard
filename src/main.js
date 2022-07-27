@@ -1,6 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+// element-ui를 사용할 수 있도록 import
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+
+
+Vue.use(Element)
+
+
 
 Vue.config.productionTip = false
 

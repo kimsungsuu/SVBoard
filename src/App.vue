@@ -1,32 +1,23 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+<!--    추가한 컴포넌트 태그 추가-->
+    <regist-board></regist-board>
+    <board-list></board-list>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
-}
+<script>
+// 컴포넌트 import
+import RegistBoard from "@/components/RegistBoard";
+import BoardList from "@/components/BoardList";
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  name: 'App',
+  //변경한 component 이름 추가
+  components: {
+    BoardList,
+    RegistBoard,
+  },
+};
+</script>
